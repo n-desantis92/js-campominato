@@ -15,6 +15,7 @@
 var numeriGenerati = [];
 var cpu = 0;
 var numeriUtente = [];
+var num = 0;
 // Il computer deve generare 16 numeri casuali tra 1 e 100.
 function cpuRandom(min, max) {
   return Math.floor(Math.random() * (max - min +1)) + min;
@@ -30,3 +31,17 @@ while (i < 5) {
   }
 }
 console.log(numeriGenerati);
+
+// In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
+var i = 0;
+while (i < 2) {
+
+  num = parseInt(prompt("inserisci un numero per n volte"));
+  if (!(isNaN(num))) {
+    numeriUtente.push(num);
+    i++;
+  }
+  alert("inserisci un numero");
+}
+
+console.log(numeriUtente);
